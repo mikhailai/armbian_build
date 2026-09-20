@@ -23,10 +23,33 @@ declare -g GOVERNOR=ondemand
 # shellcheck source=config/sources/families/include/crust_firmware.inc
 source "${BASH_SOURCE%/*}/crust_firmware.inc"
 
+KERNEL_DRIVERS_SKIP+=(
+		driver_wifi_injection
+		driver_mt7921u_add_pids
+		driver_rtl8152_rtl8153
+		driver_rtl8189ES
+		driver_rtl8189FS
+		driver_rtl8192EU
+		driver_rtl8811_rtl8812_rtl8814_rtl8821
+		driver_rtl8812EU_rtl8822EU
+		driver_xradio_xr819
+		driver_rtl8811CU_rtl8821C
+		driver_rtl8188EU_rtl8188ETV
+		driver_rtl88x2bu
+		driver_rtw88
+		driver_rtl8852bs
+		driver_rtl88x2cs
+		driver_rtl8822cs_bt
+		driver_rtl8723DS
+		driver_rtl8723DU
+		driver_uwe5622
+		driver_rtl8723cs
+	)
+
 case $BRANCH in
 
 	legacy)
-		declare -g KERNEL_MAJOR_MINOR="6.12" # Major and minor versions of this kernel.
+		declare -g KERNEL_MAJOR_MINOR="6.1" # Major and minor versions of this kernel.
 		;;
 
 	current)
