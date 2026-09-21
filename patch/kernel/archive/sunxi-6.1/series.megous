@@ -157,7 +157,6 @@
 	patches.megous/ARM-dts-sunxi-h3-h5-Protect-SCP-clocks.patch
 	patches.megous/arm64-dts-allwinner-a64-Protect-SCP-clocks.patch
 	patches.megous/arm64-dts-allwinner-h6-Protect-SCP-clocks.patch
-	patches.megous/bus-sunxi-rsb-Always-check-register-address-validity.patch
 	patches.megous/bus-sunxi-rsb-Use-devm_platform_ioremap_resource.patch
 	patches.megous/firmware-arm_scpi-Support-unidirectional-mailbox-channels.patch
 	patches.megous/ARM-dts-sunxi-a83t-Add-SCPI-protocol.patch
@@ -179,7 +178,6 @@
 	patches.megous/misc-modem-power-Power-manager-for-modems.patch
 -	patches.megous/arm64-dts-rk3399-pinebook-pro-Fix-codec-frequency-after-boot.patch
 	patches.megous/media-cedrus-Fix-missing-cleanup-in-error-path.patch
-	patches.megous/media-cedrus-Fix-failure-to-clean-up-hardware-on-probe-failure.patch
 	patches.megous/Revert-drm-sun4i-lvds-Invert-the-LVDS-polarity.patch
 	patches.megous/arm64-dts-allwinner-Enforce-consistent-MMC-numbering.patch
 	patches.megous/ARM-dts-sunxi-Add-aliases-for-MMC.patch

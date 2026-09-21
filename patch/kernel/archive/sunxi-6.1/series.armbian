@@ -30,7 +30,6 @@
 	patches.armbian/drv-clk-sunxi-ng-ccu-add-min-max-rate-sun50i-a64.patch
 	patches.armbian/drv-clk-sunxi-ng-ccu-sun50i-a64-revert-ccu-Pinebook-A64.patch
 	patches.armbian/drv-clocksource-arm_arch_timer-fix-a64-timejump.patch
-	patches.armbian/sound-soc-sunxi-sun4i-spdif-add-mclk_multiplier.patch
 	patches.armbian/sound-soc-sunxi-sun8i-codec-analog-enable-sound.patch
 	patches.armbian/sound-soc-sunxi-Provoke-the-early-load-of-sun8i-codec-analog.patch
 	patches.armbian/sound-soc-sunxi-sun4i-codec-adcis-select-capture-source.patch
@@ -164,7 +163,6 @@
 	patches.armbian/arm64-dts-allwinner-sun50i-h6-Fix-H6-emmc.patch
 	patches.armbian/arm64-dts-sun50i-h5-nanopi-r1s-h5-add-rtl8153-support.patch
 	patches.armbian/net-usb-r8152-add-LED-configuration-from-OF.patch
-	patches.armbian/arm64-dts-sun50i-h6-orangepi.dtsi-Rollback-r_rsb-to-r_i2c.patch
 	patches.armbian/arm-dts-sunxi-h3-h5-add_tve.patch
 	patches.armbian/arm-dts-sun8i-h3-fix-thermal-read.patch
 	patches.armbian/arm64-dts-sun50i-h616-bigtreetech-cb1.patch
