@@ -55,9 +55,9 @@ index 111111111111..222222222222 100644
  	if (!DP_CONF_GET_PIN_ASSIGN(dp->data.conf)) {
  		/* Is USB together with DP preferred */
 @@ -560,15 +578,37 @@ int dp_altmode_probe(struct typec_altmode *alt)
+ 	const struct typec_altmode *port = typec_altmode_get_partner(alt);
  	struct fwnode_handle *fwnode;
  	struct dp_altmode *dp;
- 	int ret;
 +	u32 port_pins, alt_pins;
  
  	/* FIXME: Port can only be DFP_U. */
@@ -94,8 +94,8 @@ index 111111111111..222222222222 100644
  		return -ENODEV;
 +	}
  
- 	ret = sysfs_create_group(&alt->dev.kobj, &dp_altmode_group);
- 	if (ret)
+ 	dp = devm_kzalloc(&alt->dev, sizeof(*dp), GFP_KERNEL);
+ 	if (!dp)
 -- 
 Armbian
 
