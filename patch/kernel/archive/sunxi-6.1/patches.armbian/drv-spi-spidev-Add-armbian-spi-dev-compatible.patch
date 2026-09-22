@@ -16,9 +16,9 @@ index 111111111111..222222222222 100644
  
  static const struct spi_device_id spidev_spi_ids[] = {
 +	{ .name = "spi-dev" },
+ 	{ .name = "bh2228fv" },
  	{ .name = "dh2228fv" },
  	{ .name = "ltc2488" },
- 	{ .name = "sx1301" },
 @@ -715,10 +716,12 @@ static int spidev_of_check(struct device *dev)
  		return 0;
  

@@ -26,8 +26,8 @@ index 111111111111..222222222222 100644
 +	reg = sun4i_spi_read(sspi, SUN4I_CTL_REG);
  
  	sun4i_spi_write(sspi, SUN4I_CTL_REG,
--			SUN4I_CTL_ENABLE | SUN4I_CTL_MASTER | SUN4I_CTL_TP);
-+			reg | SUN4I_CTL_ENABLE | SUN4I_CTL_MASTER | SUN4I_CTL_TP);
+-			SUN4I_CTL_MASTER | SUN4I_CTL_TP);
++			reg | SUN4I_CTL_MASTER | SUN4I_CTL_TP);
  
  	return 0;
  
