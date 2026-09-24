@@ -16,7 +16,7 @@ diff --git a/drivers/media/i2c/ov5640.c b/drivers/media/i2c/ov5640.c
 index 111111111111..222222222222 100644
 --- a/drivers/media/i2c/ov5640.c
 +++ b/drivers/media/i2c/ov5640.c
-@@ -2531,6 +2531,7 @@ static void ov5640_set_power_off(struct ov5640_dev *sensor)
+@@ -2532,6 +2532,7 @@ static void ov5640_set_power_off(struct ov5640_dev *sensor)
  	ov5640_power(sensor, false);
  	regulator_bulk_disable(OV5640_NUM_SUPPLIES, sensor->supplies);
  	clk_disable_unprepare(sensor->xclk);

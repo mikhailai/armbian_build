@@ -46,7 +46,7 @@ index 111111111111..222222222222 100644
  	const struct rtw89_mfw_hdr *mfw_hdr = (const struct rtw89_mfw_hdr *)mfw;
  	const struct rtw89_mfw_info *mfw_info;
  	int i;
-@@ -580,7 +580,10 @@ static void rtw89_load_firmware_cb(const struct firmware *firmware, void *contex
+@@ -578,7 +578,10 @@ static void rtw89_load_firmware_cb(const struct firmware *firmware, void *contex
  		return;
  	}
  
@@ -58,7 +58,7 @@ index 111111111111..222222222222 100644
  	complete_all(&fw->completion);
  }
  
-@@ -609,8 +612,10 @@ void rtw89_unload_firmware(struct rtw89_dev *rtwdev)
+@@ -607,8 +610,10 @@ void rtw89_unload_firmware(struct rtw89_dev *rtwdev)
  
  	rtw89_wait_firmware_completion(rtwdev);
  

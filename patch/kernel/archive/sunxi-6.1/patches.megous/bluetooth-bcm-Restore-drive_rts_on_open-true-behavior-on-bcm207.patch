@@ -15,7 +15,7 @@ diff --git a/drivers/bluetooth/hci_bcm.c b/drivers/bluetooth/hci_bcm.c
 index 111111111111..222222222222 100644
 --- a/drivers/bluetooth/hci_bcm.c
 +++ b/drivers/bluetooth/hci_bcm.c
-@@ -1564,8 +1564,13 @@ static struct bcm_device_data cyw55572_device_data = {
+@@ -1565,8 +1565,13 @@ static struct bcm_device_data cyw55572_device_data = {
  	.max_autobaud_speed = 921600,
  };
  

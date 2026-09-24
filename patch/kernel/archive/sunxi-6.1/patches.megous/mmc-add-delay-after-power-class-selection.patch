@@ -15,7 +15,7 @@ diff --git a/drivers/mmc/core/mmc.c b/drivers/mmc/core/mmc.c
 index 111111111111..222222222222 100644
 --- a/drivers/mmc/core/mmc.c
 +++ b/drivers/mmc/core/mmc.c
-@@ -1840,6 +1840,8 @@ static int mmc_init_card(struct mmc_host *host, u32 ocr,
+@@ -1842,6 +1842,8 @@ static int mmc_init_card(struct mmc_host *host, u32 ocr,
  	 */
  	mmc_select_powerclass(card);
  
@@ -24,7 +24,7 @@ index 111111111111..222222222222 100644
  	/*
  	 * Enable HPI feature (if supported)
  	 */
-@@ -1858,6 +1860,8 @@ static int mmc_init_card(struct mmc_host *host, u32 ocr,
+@@ -1860,6 +1862,8 @@ static int mmc_init_card(struct mmc_host *host, u32 ocr,
  		}
  	}
  

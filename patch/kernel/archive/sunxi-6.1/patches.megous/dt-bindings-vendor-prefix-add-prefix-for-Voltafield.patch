@@ -16,7 +16,7 @@ diff --git a/Documentation/devicetree/bindings/vendor-prefixes.yaml b/Documentat
 index 111111111111..222222222222 100644
 --- a/Documentation/devicetree/bindings/vendor-prefixes.yaml
 +++ b/Documentation/devicetree/bindings/vendor-prefixes.yaml
-@@ -1338,6 +1338,8 @@ patternProperties:
+@@ -1342,6 +1342,8 @@ patternProperties:
      description: Tronsmart
    "^truly,.*":
      description: Truly Semiconductors Limited

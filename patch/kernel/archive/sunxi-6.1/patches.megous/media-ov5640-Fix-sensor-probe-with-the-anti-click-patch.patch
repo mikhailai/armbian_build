@@ -14,7 +14,7 @@ diff --git a/drivers/media/i2c/ov5640.c b/drivers/media/i2c/ov5640.c
 index 111111111111..222222222222 100644
 --- a/drivers/media/i2c/ov5640.c
 +++ b/drivers/media/i2c/ov5640.c
-@@ -4212,24 +4212,15 @@ static int ov5640_probe(struct i2c_client *client)
+@@ -4213,24 +4213,15 @@ static int ov5640_probe(struct i2c_client *client)
  	if (ret)
  		goto entity_cleanup;
  

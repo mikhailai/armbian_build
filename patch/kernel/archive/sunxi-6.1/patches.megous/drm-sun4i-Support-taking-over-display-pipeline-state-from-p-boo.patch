@@ -39,7 +39,7 @@ diff --git a/drivers/gpu/drm/drm_fb_helper.c b/drivers/gpu/drm/drm_fb_helper.c
 index 111111111111..222222222222 100644
 --- a/drivers/gpu/drm/drm_fb_helper.c
 +++ b/drivers/gpu/drm/drm_fb_helper.c
-@@ -2435,6 +2435,7 @@ static int drm_fb_helper_generic_probe(struct drm_fb_helper *fb_helper,
+@@ -2437,6 +2437,7 @@ static int drm_fb_helper_generic_probe(struct drm_fb_helper *fb_helper,
  	struct fb_info *fbi;
  	u32 format;
  	struct iosys_map map;
@@ -47,7 +47,7 @@ index 111111111111..222222222222 100644
  	int ret;
  
  	drm_dbg_kms(dev, "surface width(%d), height(%d) and bpp(%d)\n",
-@@ -2493,6 +2494,19 @@ static int drm_fb_helper_generic_probe(struct drm_fb_helper *fb_helper,
+@@ -2495,6 +2496,19 @@ static int drm_fb_helper_generic_probe(struct drm_fb_helper *fb_helper,
  			fbi->fix.smem_start =
  				page_to_phys(virt_to_page(fbi->screen_buffer));
  #endif
@@ -162,7 +162,7 @@ index 111111111111..222222222222 100644
  	switch (encoder->encoder_type) {
  	case DRM_MODE_ENCODER_DSI:
  		/* DSI is tied to special case of CPU interface */
-@@ -885,6 +894,7 @@ static int sun4i_tcon_init_regmap(struct device *dev,
+@@ -887,6 +896,7 @@ static int sun4i_tcon_init_regmap(struct device *dev,
  		return PTR_ERR(tcon->regs);
  	}
  
@@ -170,7 +170,7 @@ index 111111111111..222222222222 100644
  	/* Make sure the TCON is disabled and all IRQs are off */
  	regmap_write(tcon->regs, SUN4I_TCON_GCTL_REG, 0);
  	regmap_write(tcon->regs, SUN4I_TCON_GINT0_REG, 0);
-@@ -893,6 +903,7 @@ static int sun4i_tcon_init_regmap(struct device *dev,
+@@ -895,6 +905,7 @@ static int sun4i_tcon_init_regmap(struct device *dev,
  	/* Disable IO lines and set them to tristate */
  	regmap_write(tcon->regs, SUN4I_TCON0_IO_TRI_REG, ~0);
  	regmap_write(tcon->regs, SUN4I_TCON1_IO_TRI_REG, ~0);
@@ -178,7 +178,7 @@ index 111111111111..222222222222 100644
  
  	return 0;
  }
-@@ -1164,6 +1175,9 @@ static int sun4i_tcon_bind(struct device *dev, struct device *master,
+@@ -1167,6 +1178,9 @@ static int sun4i_tcon_bind(struct device *dev, struct device *master,
  	tcon->dev = dev;
  	tcon->id = engine->id;
  	tcon->quirks = of_device_get_match_data(dev);
@@ -188,7 +188,7 @@ index 111111111111..222222222222 100644
  
  	tcon->lcd_rst = devm_reset_control_get(dev, "lcd");
  	if (IS_ERR(tcon->lcd_rst)) {
-@@ -1185,12 +1199,14 @@ static int sun4i_tcon_bind(struct device *dev, struct device *master,
+@@ -1188,12 +1202,14 @@ static int sun4i_tcon_bind(struct device *dev, struct device *master,
  		}
  	}
  
@@ -203,7 +203,7 @@ index 111111111111..222222222222 100644
  
  	if (tcon->quirks->supports_lvds) {
  		/*
-@@ -1354,8 +1370,15 @@ static int sun4i_tcon_probe(struct platform_device *pdev)
+@@ -1357,8 +1373,15 @@ static int sun4i_tcon_probe(struct platform_device *pdev)
  	const struct sun4i_tcon_quirks *quirks;
  	struct drm_bridge *bridge;
  	struct drm_panel *panel;

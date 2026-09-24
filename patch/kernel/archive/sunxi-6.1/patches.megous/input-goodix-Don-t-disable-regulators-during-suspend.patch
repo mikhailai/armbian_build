@@ -20,7 +20,7 @@ diff --git a/drivers/input/touchscreen/goodix.c b/drivers/input/touchscreen/good
 index 111111111111..222222222222 100644
 --- a/drivers/input/touchscreen/goodix.c
 +++ b/drivers/input/touchscreen/goodix.c
-@@ -1462,8 +1462,6 @@ static int __maybe_unused goodix_suspend(struct device *dev)
+@@ -1463,8 +1463,6 @@ static int __maybe_unused goodix_suspend(struct device *dev)
  		goodix_free_irq(ts);
  		goodix_irq_direction_output(ts, 0);
  		gpiod_direction_output(ts->gpiod_rst, 0);
@@ -29,7 +29,7 @@ index 111111111111..222222222222 100644
  		return 0;
  	}
  
-@@ -1513,18 +1511,6 @@ static int __maybe_unused goodix_resume(struct device *dev)
+@@ -1514,18 +1512,6 @@ static int __maybe_unused goodix_resume(struct device *dev)
  	int error;
  
  	if (ts->poweroff_in_suspend) {

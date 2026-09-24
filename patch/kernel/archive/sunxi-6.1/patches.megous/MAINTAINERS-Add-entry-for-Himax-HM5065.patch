@@ -12,7 +12,7 @@ diff --git a/MAINTAINERS b/MAINTAINERS
 index 111111111111..222222222222 100644
 --- a/MAINTAINERS
 +++ b/MAINTAINERS
-@@ -9165,6 +9165,12 @@ W:	http://www.highpoint-tech.com
+@@ -9166,6 +9166,12 @@ W:	http://www.highpoint-tech.com
  F:	Documentation/scsi/hptiop.rst
  F:	drivers/scsi/hptiop.c
  

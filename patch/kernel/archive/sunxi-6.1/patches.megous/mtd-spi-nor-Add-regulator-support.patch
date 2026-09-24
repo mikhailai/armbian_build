@@ -13,7 +13,7 @@ diff --git a/drivers/mtd/spi-nor/core.c b/drivers/mtd/spi-nor/core.c
 index 111111111111..222222222222 100644
 --- a/drivers/mtd/spi-nor/core.c
 +++ b/drivers/mtd/spi-nor/core.c
-@@ -3127,6 +3127,22 @@ static int spi_nor_probe(struct spi_mem *spimem)
+@@ -3269,6 +3269,22 @@ static int spi_nor_probe(struct spi_mem *spimem)
  	if (!nor)
  		return -ENOMEM;
  
@@ -36,7 +36,7 @@ index 111111111111..222222222222 100644
  	nor->spimem = spimem;
  	nor->dev = &spi->dev;
  	spi_nor_set_flash_node(nor, spi->dev.of_node);
-@@ -3154,7 +3170,7 @@ static int spi_nor_probe(struct spi_mem *spimem)
+@@ -3296,7 +3312,7 @@ static int spi_nor_probe(struct spi_mem *spimem)
  
  	ret = spi_nor_scan(nor, flash_name, &hwcaps);
  	if (ret)
@@ -45,7 +45,7 @@ index 111111111111..222222222222 100644
  
  	spi_nor_debugfs_register(nor);
  
-@@ -3169,20 +3185,28 @@ static int spi_nor_probe(struct spi_mem *spimem)
+@@ -3311,20 +3327,28 @@ static int spi_nor_probe(struct spi_mem *spimem)
  		nor->bouncebuf = devm_kmalloc(nor->dev,
  					      nor->bouncebuf_size,
  					      GFP_KERNEL);
@@ -79,7 +79,7 @@ index 111111111111..222222222222 100644
  }
  
  static int spi_nor_remove(struct spi_mem *spimem)
-@@ -3190,6 +3214,7 @@ static int spi_nor_remove(struct spi_mem *spimem)
+@@ -3332,6 +3356,7 @@ static int spi_nor_remove(struct spi_mem *spimem)
  	struct spi_nor *nor = spi_mem_get_drvdata(spimem);
  
  	spi_nor_restore(nor);

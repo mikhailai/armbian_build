@@ -5,8 +5,8 @@ Subject: media: cedrus: Fix missing cleanup in error path
 
 Signed-off-by: Samuel Holland <samuel@sholland.org>
 ---
- drivers/staging/media/sunxi/cedrus/cedrus.c | 1 ++
- 1 file changed, 1 insertions(+)
+ drivers/staging/media/sunxi/cedrus/cedrus.c | 1 +
+ 1 file changed, 1 insertion(+)
 
 diff --git a/drivers/staging/media/sunxi/cedrus/cedrus.c b/drivers/staging/media/sunxi/cedrus/cedrus.c
 index 111111111111..222222222222 100644
@@ -20,6 +20,6 @@ index 111111111111..222222222222 100644
  err_free:
  	v4l2_fh_exit(&ctx->fh);
  	kfree(ctx);
---
+-- 
 Armbian
 

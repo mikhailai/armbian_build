@@ -11,7 +11,7 @@ diff --git a/drivers/usb/typec/tcpm/fusb302.c b/drivers/usb/typec/tcpm/fusb302.c
 index 111111111111..222222222222 100644
 --- a/drivers/usb/typec/tcpm/fusb302.c
 +++ b/drivers/usb/typec/tcpm/fusb302.c
-@@ -1620,6 +1620,10 @@ static irqreturn_t fusb302_irq_intn(int irq, void *dev_id)
+@@ -1628,6 +1628,10 @@ static irqreturn_t fusb302_irq_intn(int irq, void *dev_id)
  static void fusb302_print_state(struct fusb302_chip *chip)
  {
  	u8 ctl0, ctl2, measure, status0, status1a, sw0, mask;
@@ -22,7 +22,7 @@ index 111111111111..222222222222 100644
  	int ret;
  
  	ret = fusb302_i2c_read(chip, FUSB_REG_CONTROL0, &ctl0);
-@@ -1646,7 +1650,7 @@ static void fusb302_print_state(struct fusb302_chip *chip)
+@@ -1654,7 +1658,7 @@ static void fusb302_print_state(struct fusb302_chip *chip)
  
  	//FUSB_REG(FUSB_REG_POWER) // power control
  
@@ -31,7 +31,7 @@ index 111111111111..222222222222 100644
  	switch ((ctl0 >> 2) & 3) {
  	case 0: host_cur = "none"; break;
  	case 1: host_cur = "80uA"; break;
-@@ -1654,7 +1658,7 @@ static void fusb302_print_state(struct fusb302_chip *chip)
+@@ -1662,7 +1666,7 @@ static void fusb302_print_state(struct fusb302_chip *chip)
  	case 3: host_cur = "330uA"; break;
  	}
  
@@ -40,7 +40,7 @@ index 111111111111..222222222222 100644
  	switch (status0 & 3) {
  	case 0: bc_lvl = "0-200mV"; break;
  	case 1: bc_lvl = "200-660mV"; break;
-@@ -1663,17 +1667,17 @@ static void fusb302_print_state(struct fusb302_chip *chip)
+@@ -1671,17 +1675,17 @@ static void fusb302_print_state(struct fusb302_chip *chip)
  	}
  
  	// status0

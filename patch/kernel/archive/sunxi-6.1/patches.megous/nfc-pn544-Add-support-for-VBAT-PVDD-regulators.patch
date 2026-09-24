@@ -37,7 +37,7 @@ index 111111111111..222222222222 100644
  /*
   * Exposed through the 4 most significant bytes
   * from the HCI SW_VERSION first byte, a.k.a.
-@@ -150,6 +159,7 @@ struct pn544_i2c_phy {
+@@ -148,6 +157,7 @@ struct pn544_i2c_phy {
  	struct i2c_client *i2c_dev;
  	struct nfc_hci_dev *hdev;
  
@@ -45,7 +45,7 @@ index 111111111111..222222222222 100644
  	struct gpio_desc *gpiod_en;
  	struct gpio_desc *gpiod_fw;
  
-@@ -240,6 +250,13 @@ static void pn544_hci_i2c_enable_mode(struct pn544_i2c_phy *phy, int run_mode)
+@@ -238,6 +248,13 @@ static void pn544_hci_i2c_enable_mode(struct pn544_i2c_phy *phy, int run_mode)
  static int pn544_hci_i2c_enable(void *phy_id)
  {
  	struct pn544_i2c_phy *phy = phy_id;
@@ -59,7 +59,7 @@ index 111111111111..222222222222 100644
  
  	pn544_hci_i2c_enable_mode(phy, PN544_HCI_MODE);
  
-@@ -262,6 +279,8 @@ static void pn544_hci_i2c_disable(void *phy_id)
+@@ -260,6 +277,8 @@ static void pn544_hci_i2c_disable(void *phy_id)
  	gpiod_set_value_cansleep(phy->gpiod_en, !phy->en_polarity);
  	usleep_range(10000, 15000);
  
@@ -68,7 +68,7 @@ index 111111111111..222222222222 100644
  	phy->powered = 0;
  }
  
-@@ -368,7 +387,7 @@ static int pn544_hci_i2c_read(struct pn544_i2c_phy *phy, struct sk_buff **skb)
+@@ -366,7 +385,7 @@ static int pn544_hci_i2c_read(struct pn544_i2c_phy *phy, struct sk_buff **skb)
  
  	if ((len < (PN544_HCI_I2C_LLC_MIN_SIZE - 1)) ||
  	    (len > (PN544_HCI_I2C_LLC_MAX_SIZE - 1))) {
@@ -77,7 +77,7 @@ index 111111111111..222222222222 100644
  		r = -EBADMSG;
  		goto flush;
  	}
-@@ -871,7 +890,7 @@ static int pn544_hci_i2c_probe(struct i2c_client *client,
+@@ -869,7 +888,7 @@ static int pn544_hci_i2c_probe(struct i2c_client *client,
  {
  	struct device *dev = &client->dev;
  	struct pn544_i2c_phy *phy;
@@ -86,7 +86,7 @@ index 111111111111..222222222222 100644
  
  	if (!i2c_check_functionality(client->adapter, I2C_FUNC_I2C)) {
  		nfc_err(&client->dev, "Need I2C_FUNC_I2C\n");
-@@ -893,6 +912,14 @@ static int pn544_hci_i2c_probe(struct i2c_client *client,
+@@ -891,6 +910,14 @@ static int pn544_hci_i2c_probe(struct i2c_client *client,
  	if (r)
  		dev_dbg(dev, "Unable to add GPIO mapping table\n");
  

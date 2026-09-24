@@ -11,7 +11,7 @@ diff --git a/drivers/gpu/drm/panel/panel-simple.c b/drivers/gpu/drm/panel/panel-
 index 111111111111..222222222222 100644
 --- a/drivers/gpu/drm/panel/panel-simple.c
 +++ b/drivers/gpu/drm/panel/panel-simple.c
-@@ -2952,6 +2952,44 @@ static const struct panel_desc okaya_rs800480t_7x0gp = {
+@@ -2954,6 +2954,44 @@ static const struct panel_desc okaya_rs800480t_7x0gp = {
  	.bus_format = MEDIA_BUS_FMT_RGB666_1X18,
  };
  
@@ -56,7 +56,7 @@ index 111111111111..222222222222 100644
  static const struct drm_display_mode olimex_lcd_olinuxino_43ts_mode = {
  	.clock = 9000,
  	.hdisplay = 480,
-@@ -2964,8 +3002,8 @@ static const struct drm_display_mode olimex_lcd_olinuxino_43ts_mode = {
+@@ -2966,8 +3004,8 @@ static const struct drm_display_mode olimex_lcd_olinuxino_43ts_mode = {
  	.vtotal = 272 + 8 + 5 + 3,
  };
  
@@ -67,7 +67,7 @@ index 111111111111..222222222222 100644
  	.num_modes = 1,
  	.size = {
  		.width = 95,
-@@ -2974,6 +3012,71 @@ static const struct panel_desc olimex_lcd_olinuxino_43ts = {
+@@ -2976,6 +3014,71 @@ static const struct panel_desc olimex_lcd_olinuxino_43ts = {
  	.bus_format = MEDIA_BUS_FMT_RGB888_1X24,
  };
  
@@ -139,7 +139,7 @@ index 111111111111..222222222222 100644
  /*
   * 800x480 CVT. The panel appears to be quite accepting, at least as far as
   * pixel clocks, but this is the timing that was being used in the Adafruit
-@@ -4200,8 +4303,23 @@ static const struct of_device_id platform_of_match[] = {
+@@ -4227,8 +4330,23 @@ static const struct of_device_id platform_of_match[] = {
  		.compatible = "okaya,rs800480t-7x0gp",
  		.data = &okaya_rs800480t_7x0gp,
  	}, {

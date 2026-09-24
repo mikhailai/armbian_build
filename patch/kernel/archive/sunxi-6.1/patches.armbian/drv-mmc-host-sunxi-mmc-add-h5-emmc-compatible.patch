@@ -11,7 +11,7 @@ diff --git a/drivers/mmc/host/sunxi-mmc.c b/drivers/mmc/host/sunxi-mmc.c
 index 111111111111..222222222222 100644
 --- a/drivers/mmc/host/sunxi-mmc.c
 +++ b/drivers/mmc/host/sunxi-mmc.c
-@@ -1214,6 +1214,13 @@ static const struct sunxi_mmc_cfg sun50i_a100_emmc_cfg = {
+@@ -1213,6 +1213,13 @@ static const struct sunxi_mmc_cfg sun50i_a100_emmc_cfg = {
  	.needs_new_timings = true,
  };
  

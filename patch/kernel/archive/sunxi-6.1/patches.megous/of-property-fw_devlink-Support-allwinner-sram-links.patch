@@ -17,7 +17,7 @@ diff --git a/drivers/of/property.c b/drivers/of/property.c
 index 111111111111..222222222222 100644
 --- a/drivers/of/property.c
 +++ b/drivers/of/property.c
-@@ -1338,6 +1338,27 @@ static struct device_node *parse_remote_endpoint(struct device_node *np,
+@@ -1425,6 +1425,27 @@ static struct device_node *parse_remote_endpoint(struct device_node *np,
  	return of_graph_get_remote_port_parent(np);
  }
  
@@ -45,7 +45,7 @@ index 111111111111..222222222222 100644
  static const struct supplier_bindings of_supplier_bindings[] = {
  	{ .parse_prop = parse_clocks, },
  	{ .parse_prop = parse_interconnects, },
-@@ -1373,6 +1394,7 @@ static const struct supplier_bindings of_supplier_bindings[] = {
+@@ -1460,6 +1481,7 @@ static const struct supplier_bindings of_supplier_bindings[] = {
  	{ .parse_prop = parse_regulators, },
  	{ .parse_prop = parse_gpio, },
  	{ .parse_prop = parse_gpios, },

@@ -11,15 +11,15 @@ diff --git a/drivers/spi/spi-sun4i.c b/drivers/spi/spi-sun4i.c
 index 111111111111..222222222222 100644
 --- a/drivers/spi/spi-sun4i.c
 +++ b/drivers/spi/spi-sun4i.c
-@@ -389,6 +389,7 @@ static int sun4i_spi_runtime_resume(struct device *dev)
- 	struct spi_master *master = dev_get_drvdata(dev);
- 	struct sun4i_spi *sspi = spi_master_get_devdata(master);
+@@ -392,6 +392,7 @@ static int sun4i_spi_runtime_resume(struct device *dev)
+ 	struct spi_controller *host = dev_get_drvdata(dev);
+ 	struct sun4i_spi *sspi = spi_controller_get_devdata(host);
  	int ret;
 +	u32 reg;
  
  	ret = clk_prepare_enable(sspi->hclk);
  	if (ret) {
-@@ -401,9 +402,10 @@ static int sun4i_spi_runtime_resume(struct device *dev)
+@@ -404,9 +405,10 @@ static int sun4i_spi_runtime_resume(struct device *dev)
  		dev_err(dev, "Couldn't enable module clock\n");
  		goto err;
  	}

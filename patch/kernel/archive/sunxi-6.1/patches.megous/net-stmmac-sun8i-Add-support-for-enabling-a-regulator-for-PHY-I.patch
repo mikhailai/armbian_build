@@ -36,7 +36,7 @@ index 111111111111..222222222222 100644
  	struct reset_control *rst_ephy;
  	const struct emac_variant *variant;
  	struct regmap_field *regmap_field;
-@@ -570,10 +573,16 @@ static int sun8i_dwmac_init(struct platform_device *pdev, void *priv)
+@@ -588,10 +591,16 @@ static int sun8i_dwmac_init(struct platform_device *pdev, void *priv)
  	struct sunxi_priv_data *gmac = priv;
  	int ret;
  
@@ -54,7 +54,7 @@ index 111111111111..222222222222 100644
  	}
  
  	if (gmac->use_internal_phy) {
-@@ -586,6 +595,8 @@ static int sun8i_dwmac_init(struct platform_device *pdev, void *priv)
+@@ -604,6 +613,8 @@ static int sun8i_dwmac_init(struct platform_device *pdev, void *priv)
  
  err_disable_regulator:
  	regulator_disable(gmac->regulator_phy);
@@ -63,7 +63,7 @@ index 111111111111..222222222222 100644
  
  	return ret;
  }
-@@ -1033,6 +1044,7 @@ static void sun8i_dwmac_exit(struct platform_device *pdev, void *priv)
+@@ -1051,6 +1062,7 @@ static void sun8i_dwmac_exit(struct platform_device *pdev, void *priv)
  		sun8i_dwmac_unpower_internal_phy(gmac);
  
  	regulator_disable(gmac->regulator_phy);
@@ -71,7 +71,7 @@ index 111111111111..222222222222 100644
  }
  
  static void sun8i_dwmac_set_mac_loopback(void __iomem *ioaddr, bool enable)
-@@ -1159,6 +1171,12 @@ static int sun8i_dwmac_probe(struct platform_device *pdev)
+@@ -1177,6 +1189,12 @@ static int sun8i_dwmac_probe(struct platform_device *pdev)
  		return dev_err_probe(dev, PTR_ERR(gmac->regulator_phy),
  				     "Failed to get PHY regulator\n");
  
