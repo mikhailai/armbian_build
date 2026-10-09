@@ -49,6 +49,8 @@ KERNEL_DRIVERS_SKIP+=(
 case $BRANCH in
 
 	legacy)
+	        declare -g KERNELSOURCE='https://git.kernel.org/pub/scm/linux/kernel/git/cip/linux-cip.git'
+		declare -g KERNELBRANCH='branch:linux-6.1.y-cip'
 		declare -g KERNEL_MAJOR_MINOR="6.1" # Major and minor versions of this kernel.
 		;;
 
